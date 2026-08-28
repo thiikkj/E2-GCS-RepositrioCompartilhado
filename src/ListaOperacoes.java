@@ -5,9 +5,15 @@ import java.util.Set;
 
 public class ListaOperacoes {
 
-    //A (INCOMPLETO!)
+    //A
     public int nOcorrencias(ArrayList<Integer> l, Integer el) {
-        return 0;
+        int count = 0;
+        for (Integer x : l) {
+            if (x.equals(el)) {
+                count++;
+            }
+        }
+        return count;
     }
 
 
@@ -29,9 +35,16 @@ public class ListaOperacoes {
     }
 
 
-    //D (INCOMPLETO!)
+    //D
     public ArrayList<Integer> listRepeat(ArrayList<Integer> l) {
-        return null;
+        Set<Integer> vistos = new HashSet<>();
+        Set<Integer> repetidos = new LinkedHashSet<>();
+        for (Integer el : l) {
+            if (!vistos.add(el)) {
+                repetidos.add(el);
+            }
+        }
+        return new ArrayList<>(repetidos);
     }
 
 
