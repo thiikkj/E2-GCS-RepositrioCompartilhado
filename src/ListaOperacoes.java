@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class ListaOperacoes {
 
-    //A
+    //A (INCOMPLETO!)
     public int nOcorrencias(ArrayList<Integer> l, Integer el) {
         int count = 0;
         for (Integer x : l) {
@@ -35,7 +35,7 @@ public class ListaOperacoes {
     }
 
 
-    //D
+    //D (INCOMPLETO!)
     public ArrayList<Integer> listRepeat(ArrayList<Integer> l) {
         Set<Integer> vistos = new HashSet<>();
         Set<Integer> repetidos = new LinkedHashSet<>();
