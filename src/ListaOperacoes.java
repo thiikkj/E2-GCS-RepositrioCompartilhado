@@ -29,9 +29,27 @@ public class ListaOperacoes {
     }
 
 
-    //C (INCOMPLETO!)
+    //C
     public int nroRepeat(ArrayList<Integer> l) {
-        return 0;
+        ArrayList<Integer> jaContados = new ArrayList<>();
+        int n = 0;
+        for (Integer el : l) {
+            if (jaContados.contains(el)) {
+                continue;
+            }
+            jaContados.add(el);
+
+            int ocorrencias = 0;
+            for (Integer atual : l) {
+                if (atual.equals(el)) {
+                    ocorrencias++;
+                }
+            }
+            if (ocorrencias > 1) {
+                n++;
+            }
+        }
+        return n;
     }
 
 
@@ -57,8 +75,14 @@ public class ListaOperacoes {
     }
 
 
-    //F (INCOMPLETO!)
+    //F
     public ArrayList<Integer> intersect(ArrayList<Integer> l1, ArrayList<Integer> l2) {
-        return null;
+        ArrayList<Integer> inter = new ArrayList<>();
+        for (Integer el : l1) {
+            if (l2.contains(el) && !inter.contains(el)) {
+                inter.add(el);
+            }
+        }
+        return inter;
     }
 }
